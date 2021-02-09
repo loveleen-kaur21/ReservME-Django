@@ -4,11 +4,11 @@ from django.db import models
 
 
 class GuestInfo(models.Model):
-    room_type = models.CharField()
+    room_type = models.CharField(max_length=250)
     room_id = models.PositiveIntegerField()
     availability = models.BooleanField()
-    full_name = models.CharField()
-    address = models.CharField()
+    full_name = models.CharField(max_length=250)
+    address = models.CharField(max_length=250)
     email = models.EmailField()
     zipcode = models.PositiveIntegerField()
     state = models.CharField(max_length=2)
@@ -16,8 +16,8 @@ class GuestInfo(models.Model):
 
 
 class PaymentInfo(models.Model):
-    company = models.CharField()
+    company = models.CharField(max_length=250)
     card_number = models.PositiveIntegerField()
-    csv = models.PositiveIntegerField(max_length=3)
-    expiration = models.DateField(defalt="MM/YY")
-    card_holder = models.CharField()
+    csv = models.PositiveIntegerField()
+    expiration = models.DateField(default="MM/YY")
+    card_holder = models.CharField(max_length=250)
