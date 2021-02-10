@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-class GuestInfo(models.Model):
+class GuestandPaymentInfo(models.Model):
     room_type = models.CharField(max_length=250)
     room_id = models.PositiveIntegerField()
     availability = models.BooleanField()
@@ -13,9 +13,6 @@ class GuestInfo(models.Model):
     zipcode = models.PositiveIntegerField()
     state = models.CharField(max_length=2)
     phone = models.PositiveIntegerField()
-
-
-class PaymentInfo(models.Model):
     company = models.CharField(max_length=250)
     card_number = models.PositiveIntegerField()
     csv = models.PositiveIntegerField()
